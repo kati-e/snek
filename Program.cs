@@ -40,7 +40,6 @@
  * 
  * The Ending Art Design:
  * ~~~~~~~~~~~~~~~~~~~~~~~~
- * (ascii art design by me)
  * 
  *                    ___
  *                  / o o\
