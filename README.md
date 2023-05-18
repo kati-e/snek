@@ -1,4 +1,4 @@
-#A simple version of the 'snake' game
+A simple version of the 'snake' game
 
 Just making this small console game for fun because I enjoy C#.
 Please feel free to use this code for whatever you like, I don't mind.
@@ -10,6 +10,7 @@ The Game Rules:
 3. When you eat fruits you gain a body part
 4. You die if your body touches itself or the wall
 5. Your 'High Score' is saved in history 
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 The Board Design:
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -37,6 +38,7 @@ The Board Design:
  O       X          O
  O       X          O
  OOOOOOOOOOOOOOOOOOOO
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 The Ending Art Design:
@@ -61,6 +63,7 @@ Sss.s.. \_\_|  \  /| ||  /__\_|   /  / _ \__
        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
        Your Score: {}
        Highest Score So Far: {}
+~~~~~~~~~~~~~~~~~~~~~~~~
 
        
 Devs Comments:
