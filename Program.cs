@@ -1,7 +1,7 @@
 ﻿/*
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * | SNAKE IN THE TERMINAL IN C# - YAY! |
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * | SNAKE IN THE TERMINAL IN C# |
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * 
  * The Game Rules:
  * ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -40,7 +40,6 @@
  * 
  * The Ending Art Design:
  * ~~~~~~~~~~~~~~~~~~~~~~~~
- * (ascii art design by me)
  * 
  *                    ___
  *                  / o o\
@@ -59,17 +58,17 @@
  *                                                     
  *        THANK YOU FOR PLAYING SNAKE (snek)!
  *        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- *        Your Score: Y
- *        Highest Score So Far: X
+ *        Your Score: {}
+ *        Highest Score So Far: {}
  *        
  *        
  * Devs Comments:
  * ~~~~~~~~~~~~~~~~~~~~~~~~
  * Hope you enjoyed my C# Snake Game.
  * 
- * I tried really hard to make this, and it was a good learning experience.
- * This is the first time I ever created the 'snake' game from scratch.
- * I am still a beginner in C# so please go easy on me (/^ - ^)/ ︵ ┻━┻
+ * I tried really hard to make this, and it is a good learning experience so far.
+ * This is the first time I ever created the 'snake' game from scratch though I have made other terminal games before.
+ * I am still fairly new to C# so please go easy on me (/^ - ^)/ ︵ ┻━┻
  * 
  * Feel free to use my code to learn or to make your own.
  * (No need to attribute me but ty if you do)
