@@ -1,0 +1,60 @@
+/Users/katie/Desktop/snake/snake/bin/Debug/net6.0/snake
+/Users/katie/Desktop/snake/snake/bin/Debug/net6.0/snake.deps.json
+/Users/katie/Desktop/snake/snake/bin/Debug/net6.0/snake.runtimeconfig.json
+/Users/katie/Desktop/snake/snake/bin/Debug/net6.0/snake.dll
+/Users/katie/Desktop/snake/snake/bin/Debug/net6.0/snake.pdb
+/Users/katie/Desktop/snake/snake/obj/Debug/net6.0/snake.csproj.AssemblyReference.cache
+/Users/katie/Desktop/snake/snake/obj/Debug/net6.0/snake.GeneratedMSBuildEditorConfig.editorconfig
+/Users/katie/Desktop/snake/snake/obj/Debug/net6.0/snake.AssemblyInfoInputs.cache
+/Users/katie/Desktop/snake/snake/obj/Debug/net6.0/snake.AssemblyInfo.cs
+/Users/katie/Desktop/snake/snake/obj/Debug/net6.0/snake.csproj.CoreCompileInputs.cache
+/Users/katie/Desktop/snake/snake/obj/Debug/net6.0/snake.dll
+/Users/katie/Desktop/snake/snake/obj/Debug/net6.0/refint/snake.dll
+/Users/katie/Desktop/snake/snake/obj/Debug/net6.0/snake.pdb
+/Users/katie/Desktop/snake/snake/obj/Debug/net6.0/snake.genruntimeconfig.cache
+/Users/katie/Desktop/snake/snake/obj/Debug/net6.0/ref/snake.dll
+/Users/katie/Desktop/snek/bin/Debug/net6.0/snake
+/Users/katie/Desktop/snek/bin/Debug/net6.0/snake.deps.json
+/Users/katie/Desktop/snek/bin/Debug/net6.0/snake.runtimeconfig.json
+/Users/katie/Desktop/snek/bin/Debug/net6.0/snake.dll
+/Users/katie/Desktop/snek/bin/Debug/net6.0/snake.pdb
+/Users/katie/Desktop/snek/obj/Debug/net6.0/snake.csproj.AssemblyReference.cache
+/Users/katie/Desktop/snek/obj/Debug/net6.0/snake.GeneratedMSBuildEditorConfig.editorconfig
+/Users/katie/Desktop/snek/obj/Debug/net6.0/snake.AssemblyInfoInputs.cache
+/Users/katie/Desktop/snek/obj/Debug/net6.0/snake.AssemblyInfo.cs
+/Users/katie/Desktop/snek/obj/Debug/net6.0/snake.csproj.CoreCompileInputs.cache
+/Users/katie/Desktop/snek/obj/Debug/net6.0/snake.dll
+/Users/katie/Desktop/snek/obj/Debug/net6.0/refint/snake.dll
+/Users/katie/Desktop/snek/obj/Debug/net6.0/snake.pdb
+/Users/katie/Desktop/snek/obj/Debug/net6.0/snake.genruntimeconfig.cache
+/Users/katie/Desktop/snek/obj/Debug/net6.0/ref/snake.dll
+/Users/katie/Desktop/PROGRAMMING PROJECTS/2022/snek/bin/Debug/net6.0/snake
+/Users/katie/Desktop/PROGRAMMING PROJECTS/2022/snek/bin/Debug/net6.0/snake.deps.json
+/Users/katie/Desktop/PROGRAMMING PROJECTS/2022/snek/bin/Debug/net6.0/snake.runtimeconfig.json
+/Users/katie/Desktop/PROGRAMMING PROJECTS/2022/snek/bin/Debug/net6.0/snake.dll
+/Users/katie/Desktop/PROGRAMMING PROJECTS/2022/snek/bin/Debug/net6.0/snake.pdb
+/Users/katie/Desktop/PROGRAMMING PROJECTS/2022/snek/obj/Debug/net6.0/snake.csproj.AssemblyReference.cache
+/Users/katie/Desktop/PROGRAMMING PROJECTS/2022/snek/obj/Debug/net6.0/snake.GeneratedMSBuildEditorConfig.editorconfig
+/Users/katie/Desktop/PROGRAMMING PROJECTS/2022/snek/obj/Debug/net6.0/snake.AssemblyInfoInputs.cache
+/Users/katie/Desktop/PROGRAMMING PROJECTS/2022/snek/obj/Debug/net6.0/snake.AssemblyInfo.cs
+/Users/katie/Desktop/PROGRAMMING PROJECTS/2022/snek/obj/Debug/net6.0/snake.csproj.CoreCompileInputs.cache
+/Users/katie/Desktop/PROGRAMMING PROJECTS/2022/snek/obj/Debug/net6.0/snake.dll
+/Users/katie/Desktop/PROGRAMMING PROJECTS/2022/snek/obj/Debug/net6.0/refint/snake.dll
+/Users/katie/Desktop/PROGRAMMING PROJECTS/2022/snek/obj/Debug/net6.0/snake.pdb
+/Users/katie/Desktop/PROGRAMMING PROJECTS/2022/snek/obj/Debug/net6.0/snake.genruntimeconfig.cache
+/Users/katie/Desktop/PROGRAMMING PROJECTS/2022/snek/obj/Debug/net6.0/ref/snake.dll
+/Users/katie/Documents/PROGRAMMING PROJECTS/2022/C#/snek/bin/Debug/net6.0/snake
+/Users/katie/Documents/PROGRAMMING PROJECTS/2022/C#/snek/bin/Debug/net6.0/snake.deps.json
+/Users/katie/Documents/PROGRAMMING PROJECTS/2022/C#/snek/bin/Debug/net6.0/snake.runtimeconfig.json
+/Users/katie/Documents/PROGRAMMING PROJECTS/2022/C#/snek/bin/Debug/net6.0/snake.dll
+/Users/katie/Documents/PROGRAMMING PROJECTS/2022/C#/snek/bin/Debug/net6.0/snake.pdb
+/Users/katie/Documents/PROGRAMMING PROJECTS/2022/C#/snek/obj/Debug/net6.0/snake.csproj.AssemblyReference.cache
+/Users/katie/Documents/PROGRAMMING PROJECTS/2022/C#/snek/obj/Debug/net6.0/snake.GeneratedMSBuildEditorConfig.editorconfig
+/Users/katie/Documents/PROGRAMMING PROJECTS/2022/C#/snek/obj/Debug/net6.0/snake.AssemblyInfoInputs.cache
+/Users/katie/Documents/PROGRAMMING PROJECTS/2022/C#/snek/obj/Debug/net6.0/snake.AssemblyInfo.cs
+/Users/katie/Documents/PROGRAMMING PROJECTS/2022/C#/snek/obj/Debug/net6.0/snake.csproj.CoreCompileInputs.cache
+/Users/katie/Documents/PROGRAMMING PROJECTS/2022/C#/snek/obj/Debug/net6.0/snake.dll
+/Users/katie/Documents/PROGRAMMING PROJECTS/2022/C#/snek/obj/Debug/net6.0/refint/snake.dll
+/Users/katie/Documents/PROGRAMMING PROJECTS/2022/C#/snek/obj/Debug/net6.0/snake.pdb
+/Users/katie/Documents/PROGRAMMING PROJECTS/2022/C#/snek/obj/Debug/net6.0/snake.genruntimeconfig.cache
+/Users/katie/Documents/PROGRAMMING PROJECTS/2022/C#/snek/obj/Debug/net6.0/ref/snake.dll
