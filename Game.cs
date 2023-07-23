@@ -149,7 +149,10 @@ public class Game
 			beat = false;
 		}
 
-		return beat;
+		WriteLine("\n\nThank you for playing snek, press any key to exit.");
+        ReadKey();
+
+        return beat;
 
 	}
 

@@ -13,13 +13,12 @@ class Program
     {
         //Setup Game
         Game snake = new Game();
-        int score = 999;
-        int highscore = 99;
+        int score = 70;
+        int highscore = HighScore.LoadHighScore();
         bool endGame = snake.Setup();
 
         //Start Game
         snake.Start();
-        score = 100; // initialise starting score at 0
 
         //Play Game
         while (endGame == false)
@@ -37,11 +36,9 @@ class Program
 
             //if hits self then endGame = true
             endGame = true;
-
         }
 
         //End Game
-        endGame = true;
         //function to compare end score to current highscore
         
         bool beatHighScore = snake.End(score, highscore);
@@ -49,6 +46,7 @@ class Program
         if (beatHighScore)
         {
             //if score > highscore --> highscore == score (and then save in storage)
+            HighScore.SaveHighScore(score);
         }
     }
 }
