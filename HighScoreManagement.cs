@@ -2,7 +2,7 @@
 using static System.Console;
 using System.IO;
 
-public static class HighScore
+public static class HighScoreManagement
 {
 
     private const string _highScoreFile = "scorekeeper.txt";

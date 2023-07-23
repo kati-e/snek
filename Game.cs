@@ -3,18 +3,21 @@ using static System.Console;
 
 public class Game
 {
-	public bool Setup()
+	public int Score;
+	public int HighScore;
+	public bool EndGame = false; //will set to true when game ends
+
+	public Game(int score, int highscore)
 	{
-		bool gameover;
-		gameover = false;
-		return gameover;
+		Score = score;
+		HighScore = highscore;
 	}
 
 	public void Start()
 	{
-		snekBanner();
+		snekBanner(Score, HighScore);
 		WriteLine(
-			"                    Press 'N' to Start!    \n\n"
+			" Press 'N' to Start!    \n\n"
 			);
 
 		PrintRules();
@@ -53,7 +56,7 @@ public class Game
 			"To gain points you must eat fruits (#)",
 			"When you eat fruits you gain a body part",
 			"You die if your body touches itself or the wall",
-			"Your 'High Score' is saved in history" };
+			"The 'High Score' is saved in history" };
 
 		WriteLine(" Rules: 1. " + Rules[0]);
 
@@ -62,15 +65,11 @@ public class Game
 			WriteLine("        " + (i + 1) + ". " + Rules[i]);
 		}
 
-		WriteLine("\n\n Created by: kati-e");
+		WriteLine("\n\n Created by: kati-e (^.^) Have fun~");
 	}
 
-	public bool End(int score, int highScore)
+	public void End(int score, int highScore)
 	{
-		int Score = score;
-		int HighScore = highScore;
-		bool beat = false;
-
 		Clear();
 		WriteLine(
 			@"___________________________________________________________" + "\n" +
@@ -95,18 +94,14 @@ public class Game
 			@"|          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~                   |"
 			);
 
-
 		//Stringing the score and high score to appear in the end screen
 		string printScore = Convert.ToString(score);
 		string printHighScore = Convert.ToString(highScore);
 
-		//What is the point of making them into strings?
-		//I need to add or take spaces depending on the number of digits
-		//of the score to make it fit nicely in the end screen graphic
-		//(It was designed to fit 3-digits, anything else needs adjusting)
+        //The end graphic was designed to fit 3-digits, anything else needs adjusting.
 
-		//Is the score two digits? Add one space.
-		if (score < 100 && score > 9)
+        //Is the score two digits? Add one space next to it on the end screen.
+        if (score < 100 && score > 9)
 		{
 			printScore += " ";
 		}
@@ -115,7 +110,7 @@ public class Game
 			printHighScore += " ";
 		}
 
-		//Is the scores a single digit? Add two spaces.
+		//Is the scores a single digit? Add two spaces next to it on the end screen.
 		if (score < 10)
 		{
 			printScore += "  ";
@@ -125,8 +120,7 @@ public class Game
 			printHighScore += "  ";
 		}
 
-		//having two different bases to the end screen below
-		//depending on beating highscore or not
+		//There are two different bases for the end screen below depending on beating highscore or not
 		if (score > highScore)
 		{
 
@@ -137,8 +131,11 @@ public class Game
 				@"|          CONGRATULATIONS!! You beat the highscore!      |" + "\n" +
 				@"|_________________________________________________________|"
 				);
-			beat = true;
-		} else
+
+			//Saves the new score to a .txt file to persist
+			HighScoreManagement.SaveHighScore(score);
+
+        } else
 		{
 			WriteLine(
 				@"|          Your score: " + printScore + "                                |" + "\n" +
@@ -146,24 +143,23 @@ public class Game
 				@"|                                                         |" + "\n" +
 				@"|_________________________________________________________|"
 				);
-			beat = false;
 		}
 
+		//allows the endscreen to display while awaiting user input to quit
 		WriteLine("\n\nThank you for playing snek, press any key to exit.");
         ReadKey();
 
-        return beat;
+    }
 
-	}
-
-	public static void snekBanner()
+	public static void snekBanner(int currentscore, int highscore)
 	{
 		Clear();
 		WriteLine(
 			"|----------------------------------------------------------|\n" +
 			"|------------------------ SNEK GAME! ----------------------|\n" +
-			"|----------------------------------------------------------|\n\n"
-			);
+			"|----------------------------------------------------------|\n\n" +
+            " current score: {0}   high score: {1} \n", currentscore, highscore
+            );
 	}
 
 } 

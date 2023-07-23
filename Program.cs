@@ -12,16 +12,15 @@ class Program
     static void Main()
     {
         //Setup Game
-        Game snake = new Game();
-        int score = 70;
-        int highscore = HighScore.LoadHighScore();
-        bool endGame = snake.Setup();
+        int score = 0; //initialise the start score at 0
+        int highscore = HighScoreManagement.LoadHighScore();
+        Game snake = new Game(score, highscore);
 
         //Start Game
         snake.Start();
 
         //Play Game
-        while (endGame == false)
+        while (snake.EndGame == false)
         {
             //Draw Board
 
@@ -35,18 +34,10 @@ class Program
             //if hits wall then endGame = true
 
             //if hits self then endGame = true
-            endGame = true;
+            snake.EndGame = true;
         }
 
-        //End Game
-        //function to compare end score to current highscore
-        
-        bool beatHighScore = snake.End(score, highscore);
-
-        if (beatHighScore)
-        {
-            //if score > highscore --> highscore == score (and then save in storage)
-            HighScore.SaveHighScore(score);
-        }
+        //End Game        
+        snake.End(score, highscore);
     }
 }
