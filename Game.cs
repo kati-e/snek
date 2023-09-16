@@ -5,13 +5,34 @@ public class Game
 {
 	public int Score;
 	public int HighScore;
-	public bool EndGame = false; //will set to true when game ends
+	public string Direction;
+    public bool EndGame = false; //will set to true when game ends
+	private int x, y, frutX, frutY, boardW, boardH;
 
-	public Game(int score, int highscore)
+	public Game(int score, int highscore, string direction)
 	{
 		Score = score;
 		HighScore = highscore;
+		Direction = direction;
 	}
+
+	public void Setup()
+	{
+
+		Random rand = new Random();
+
+        //make board 
+        boardW = 20;
+		boardH = 20;
+
+        //place lil sneky boi in the center
+        x = boardW / 2;
+		y = boardH / 2;
+
+		//place frut randomly
+		frutX = rand.Next(boardW);
+        frutY = rand.Next(boardH);
+    }
 
 	public void Start()
 	{

@@ -14,7 +14,8 @@ class Program
         //Setup Game
         int score = 0; //initialise the start score at 0
         int highscore = HighScoreManagement.LoadHighScore();
-        Game snake = new Game(score, highscore);
+        Game snake = new Game(score, highscore, "STOP");
+        snake.Setup();
 
         //Start Game
         snake.Start();
@@ -26,6 +27,27 @@ class Program
 
             //Input
             // A W D or S
+            if (KeyAvailable)
+            {
+                // Read the key that was pressed
+                ConsoleKeyInfo keyInfo = ReadKey(intercept: true);
+
+                switch (keyInfo.Key)
+                {
+                    case ConsoleKey.W:
+                        snake.Direction = "UP";
+                        break;
+                    case ConsoleKey.A:
+                        snake.Direction = "LEFT";
+                        break;
+                    case ConsoleKey.S:
+                        snake.Direction = "DOWN";
+                        break;
+                    case ConsoleKey.D:
+                        snake.Direction = "RIGHT";
+                        break;
+                }
+            }
 
             //Logic
 
@@ -34,6 +56,9 @@ class Program
             //if hits wall then endGame = true
 
             //if hits self then endGame = true
+
+            //Add a 'Sleep' function to slow it down a little when game is nearly done :)
+
             snake.EndGame = true;
         }
 
