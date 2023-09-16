@@ -29,8 +29,8 @@ public class Game
 		y = boardH / 2;
 
 		//place frut randomly
-		frutX = rand.Next(boardW);
-		frutY = rand.Next(boardH);
+		frutX = rand.Next(boardW-1);
+		frutY = rand.Next(boardH-1);
     }
 
 	public void Start()
@@ -104,6 +104,9 @@ public class Game
 			case "RIGHT":
 				x++;
 				break;
+			case "DEAD":
+				EndGame = true;
+				break;
 		}
     }
 
@@ -166,22 +169,33 @@ public class Game
 				{
 					Write("|");
 				}
-				else if (j == boardW - 1)
+
+				if (j == boardW - 1)
 				{
                     WriteLine("|");
                 }
-				else if (i == y && j == x)
-				{
-					Write("U");
-				}
-				else if (i == frutY && j == frutX)
-				{
-					Write("#");
-				}
-                else
+
+                if ((i == y && j == x) && (x <= 0 || x >= boardW - 2 || y <= 0 || y >= boardH - 1))
+                {
+                    Write("X");
+                    Direction = "DEAD";
+                }
+                else if (i == y && j == x)
+                {
+                    Write("U");
+                }
+
+				if (i == frutY && j == frutX)
+                {
+                    Write("#");
+                }
+
+				if (!(i == y && j == x) && !(i == frutY && j == frutX) && !(j == 0) && !(j == boardW - 1))
 				{
 					Write(" ");
 				}
+
+
 			}
 		}
 	}

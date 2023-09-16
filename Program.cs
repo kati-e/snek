@@ -18,7 +18,7 @@ class Program
         Game snake = new Game(score, highscore);
         snake.Setup();
 
-        Timer snakeTimer = new Timer(_ => snake.Logic(), null, 0, 1000);
+        Timer snakeTimer = new Timer(_ => snake.Logic(), null, 0, 5000);
 
         //Start Game
         snake.Start();
@@ -52,11 +52,15 @@ class Program
 
             //Logic
             snake.Logic();
+            Thread.Sleep(150);
 
-            Thread.Sleep(100);
+            if (snake.EndGame == true)
+            {
+                WriteLine("\n<(x_x)> Lol sorry you ded.");
+                WriteLine("Press any key to continue...");
+                ReadKey();
+            }
 
-            //snake.EndGame = true;
-            //ReadKey();
         }
 
         //End Game        
