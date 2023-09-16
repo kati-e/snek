@@ -6,6 +6,7 @@
 
 using System;
 using static System.Console;
+using System.Threading;
 
 class Program
 {
@@ -16,6 +17,8 @@ class Program
         int highscore = HighScoreManagement.LoadHighScore();
         Game snake = new Game(score, highscore);
         snake.Setup();
+
+        Timer snakeTimer = new Timer(_ => snake.Logic(), null, 0, 1000);
 
         //Start Game
         snake.Start();
@@ -48,17 +51,12 @@ class Program
             }
 
             //Logic
+            snake.Logic();
 
-            //if eats fruit then score++
+            Thread.Sleep(100);
 
-            //if hits wall then endGame = true
-
-            //if hits self then endGame = true
-
-            //Add a 'Sleep' function to slow it down a little when game is nearly done :)
-
-            snake.EndGame = true;
-            ReadKey();
+            //snake.EndGame = true;
+            //ReadKey();
         }
 
         //End Game        

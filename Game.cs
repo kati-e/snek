@@ -85,7 +85,29 @@ public class Game
 		WriteLine("\n\n Created by: kati-e (^.^) Have fun~");
 	}
 
-	public void Draw()
+	public void Logic()
+	{
+        //if eats fruit then score++
+        //if hits wall then endGame = true
+        //if hits self then endGame = true
+		switch(Direction)
+		{
+			case "UP":
+				y--;
+				break;
+			case "DOWN":
+				y++;
+				break;
+			case "LEFT":
+				x--;
+				break;
+			case "RIGHT":
+				x++;
+				break;
+		}
+    }
+
+    public void Draw()
 	{
 		Clear();
 
@@ -117,9 +139,14 @@ public class Game
 
         //bottom line
         _boardline();
-    }
 
-	private void _boardline()
+		//TEMP
+		WriteLine("Direction:" + Direction);
+		WriteLine("X:" + x);
+		WriteLine("Y:" + y);
+	}
+
+    private void _boardline()
 	{
 		string line = "";
 
@@ -138,10 +165,20 @@ public class Game
 				if (j == 0)
 				{
 					Write("|");
-				} else if (j == boardW - 1)
+				}
+				else if (j == boardW - 1)
 				{
                     WriteLine("|");
-                } else
+                }
+				else if (i == y && j == x)
+				{
+					Write("U");
+				}
+				else if (i == frutY && j == frutX)
+				{
+					Write("#");
+				}
+                else
 				{
 					Write(" ");
 				}
