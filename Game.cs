@@ -36,19 +36,16 @@ public class Game
 	public void Start()
 	{
 		snekBanner(Score, HighScore);
-		WriteLine(
-			" Press 'N' to Start!    \n\n"
-			);
 
 		PrintRules();
-
-		Write("\n\n >> ");
+        WriteLine("\n Press 'N' to Start!    \n");
+        Write("\n >> ");
 		string Input = ReadLine();
 		bool Valid = ValidInput(Input);
 
 		while (!Valid)
 		{
-			Write("\n\n Invalid. Please Type 'N' >> ");
+			Write("\n Invalid. Please Type 'N' >> ");
 			Input = ReadLine();
 			Valid = ValidInput(Input);
 		}
@@ -104,24 +101,25 @@ public class Game
         {
             header = "| -- score: " + Score + "  -- |";
         }
-        //if it's 1 digit or 9999999999 digits lol
+        //if it's 1 digit (or 9999999999 digits but hopefully that won't be possible)
         else
         {
             header = "| --  score: " + Score + "  -- |";
         }
 
         //top line
-        _line();
+        _boardline();
         WriteLine(header);
-        _line();
+        _boardline();
 
-		WriteLine("inside of board here");
+		//inner sectionz
+		_boardinner();
 
-		//bottom line
-		_line();
+        //bottom line
+        _boardline();
     }
 
-	private void _line()
+	private void _boardline()
 	{
 		string line = "";
 
@@ -131,6 +129,25 @@ public class Game
         }
         WriteLine(line);
     }
+	private void _boardinner()
+	{
+		for (int i = 0; i < boardH; i++)
+		{
+			for (int j = 0; j < boardW; j++)
+			{
+				if (j == 0)
+				{
+					Write("|");
+				} else if (j == boardW - 1)
+				{
+                    WriteLine("|");
+                } else
+				{
+					Write(" ");
+				}
+			}
+		}
+	}
 
 	public void End(int score, int highScore)
 	{
