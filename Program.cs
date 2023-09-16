@@ -14,7 +14,7 @@ class Program
         //Setup Game
         int score = 0; //initialise the start score at 0
         int highscore = HighScoreManagement.LoadHighScore();
-        Game snake = new Game(score, highscore, "STOP");
+        Game snake = new Game(score, highscore);
         snake.Setup();
 
         //Start Game
@@ -24,14 +24,12 @@ class Program
         while (snake.EndGame == false)
         {
             //Draw Board
+            snake.Draw();
 
-            //Input
-            // A W D or S
+            //Input: A W D or S
             if (KeyAvailable)
             {
-                // Read the key that was pressed
                 ConsoleKeyInfo keyInfo = ReadKey(intercept: true);
-
                 switch (keyInfo.Key)
                 {
                     case ConsoleKey.W:
@@ -60,6 +58,7 @@ class Program
             //Add a 'Sleep' function to slow it down a little when game is nearly done :)
 
             snake.EndGame = true;
+            ReadKey();
         }
 
         //End Game        

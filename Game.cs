@@ -5,15 +5,14 @@ public class Game
 {
 	public int Score;
 	public int HighScore;
-	public string Direction;
-    public bool EndGame = false; //will set to true when game ends
+	public string Direction = "FROZEN";
+	public bool EndGame = false;
 	private int x, y, frutX, frutY, boardW, boardH;
 
-	public Game(int score, int highscore, string direction)
+	public Game(int score, int highscore)
 	{
 		Score = score;
 		HighScore = highscore;
-		Direction = direction;
 	}
 
 	public void Setup()
@@ -31,7 +30,7 @@ public class Game
 
 		//place frut randomly
 		frutX = rand.Next(boardW);
-        frutY = rand.Next(boardH);
+		frutY = rand.Next(boardH);
     }
 
 	public void Start()
@@ -88,6 +87,50 @@ public class Game
 
 		WriteLine("\n\n Created by: kati-e (^.^) Have fun~");
 	}
+
+	public void Draw()
+	{
+		Clear();
+
+		string header = "";
+
+		//if 3 digits (wow, noice score!)
+        if (Score > 99)
+        {
+            header = "| -- score: " + Score + " -- |";
+        }
+		//if 2 digits
+        else if (Score > 9)
+        {
+            header = "| -- score: " + Score + "  -- |";
+        }
+        //if it's 1 digit or 9999999999 digits lol
+        else
+        {
+            header = "| --  score: " + Score + "  -- |";
+        }
+
+        //top line
+        _line();
+        WriteLine(header);
+        _line();
+
+		WriteLine("inside of board here");
+
+		//bottom line
+		_line();
+    }
+
+	private void _line()
+	{
+		string line = "";
+
+        for (int i = 0; i < boardW; i++)
+        {
+			line = line + "-";
+        }
+        WriteLine(line);
+    }
 
 	public void End(int score, int highScore)
 	{
