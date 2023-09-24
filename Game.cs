@@ -29,8 +29,8 @@ public class Game
 		y = boardH / 2;
 
 		//place frut randomly
-		frutX = rand.Next(boardW-1);
-		frutY = rand.Next(boardH-1);
+		frutX = rand.Next(boardW);
+		frutY = rand.Next(boardH);
     }
 
 	public void Start()
@@ -51,7 +51,24 @@ public class Game
 		}
 
 	}
-	public bool ValidInput(string input)
+    public void Progress()
+    {
+
+        WriteLine("\n<(x_x)> Lol sorry you ded.");
+        WriteLine("\n Press 'N' to continue...    \n");
+        Write("\n >> ");
+        string Input = ReadLine();
+        bool Valid = ValidInput(Input);
+
+        while (!Valid)
+        {
+            Write("\n Invalid. Please Type 'N' >> ");
+            Input = ReadLine();
+            Valid = ValidInput(Input);
+        }
+
+    }
+    public bool ValidInput(string input)
 	{
 		bool valid;
 
@@ -143,10 +160,10 @@ public class Game
         //bottom line
         _boardline();
 
-		//TEMP
-		WriteLine("Direction:" + Direction);
-		WriteLine("X:" + x);
-		WriteLine("Y:" + y);
+		//TEMP - for testing only 
+		//WriteLine("Direction:" + Direction);
+		//WriteLine("X:" + x);
+		//WriteLine("Y:" + y);
 	}
 
     private void _boardline()
@@ -188,6 +205,15 @@ public class Game
 				if (i == frutY && j == frutX)
                 {
                     Write("#");
+                }
+
+				if (x == frutX && y == frutY)
+				{
+					Score++;
+                    //place frut randomly again
+					Random rand = new Random();
+                    frutX = rand.Next(boardW);
+                    frutY = rand.Next(boardH);
                 }
 
 				if (!(i == y && j == x) && !(i == frutY && j == frutX) && !(j == 0) && !(j == boardW - 1))

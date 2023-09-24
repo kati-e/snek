@@ -52,18 +52,16 @@ class Program
 
             //Logic
             snake.Logic();
-            Thread.Sleep(150);
+            Thread.Sleep(180);
 
             if (snake.EndGame == true)
             {
-                WriteLine("\n<(x_x)> Lol sorry you ded.");
-                WriteLine("Press any key to continue...");
-                ReadKey();
+                snake.Progress();
             }
 
         }
 
         //End Game        
-        snake.End(score, highscore);
+        snake.End(snake.Score, highscore);
     }
 }
